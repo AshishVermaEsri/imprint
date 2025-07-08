@@ -85,7 +85,9 @@
     input-processors =
         // this gets it to the default installation orientation,
         <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>;
-
+        // Add these lines to fix reversed movements:
+        <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>,
+        <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>;
     // activate layer 3 within 500ms of the trackball moving
     // <&zip_temp_layer 3 500>;
 };
